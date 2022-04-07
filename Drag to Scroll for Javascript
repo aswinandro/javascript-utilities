@@ -3,15 +3,19 @@ Drag to scroll
 User often uses the mouse to scroll in a scrollable container. In addition to that, some applications also allow user to scroll by dragging the element. You can see that feature implemented in a PDF viewer, Figma and many more.
 This post shows you a simple way to archive that feature with vanilla JavaScript.
 Assume that we have a scrollable container as below:
+
 <div id="container" class="container">...</div>
+
 The element must have at least two CSS properties:
 .container {
     cursor: grab;
     overflow: auto;
 }
+
 The cursor: grab indicates that the element can be clicked and dragged.
 Scroll to given position
 As long as the element is scrollable, we can scroll it to given position by setting the scrollTop or scrollLeft property:
+
 const ele = document.getElementById('container');
 ele.scrollTop = 100;
 ele.scrollLeft = 150;
